@@ -8,14 +8,16 @@
 
 int main(void)
 {
-	int num;
+	char comb;
 
-	num = 0;
-
-	while (num <= 9)
+	for (comb = '0'; comb <= '9'; comb ++)
 	{
-		putchar(num + '0');
-		num++;
+		putchar(comb);
+	}
+
+	for (comb = 'a'; comb <= 'f'; comb ++)
+	{
+		putchar(comb);
 	}
 
 	putchar('\n');
