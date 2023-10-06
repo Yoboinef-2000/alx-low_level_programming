@@ -5,19 +5,19 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char comb;
+	int i;
 
-	for (comb = '0'; comb <= '9'; comb++)
+	for (i = 0; i <= 9; i++)
 	{
-		putchar(comb);
-	}
-
-	for (comb = 'a'; comb <= 'f'; comb++)
-	{
-		putchar(comb);
+		putchar(i + '0');
+	
+		if (i < 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 
 	putchar('\n');
