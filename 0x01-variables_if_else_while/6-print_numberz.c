@@ -8,16 +8,16 @@
 
 int main(void)
 {
-	char alph;
+	char num;
 
-	alph = 'a';
+	num = '0';
 
-	while (alph <= 'z')
+	while (num <= '9')
 	{
-		putchar(alph);
-		alph++;
+		putchar(num);
+		num++;
 	}
-
+	
 	putchar('\n');
 	return (0);
 }

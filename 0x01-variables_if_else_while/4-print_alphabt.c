@@ -12,7 +12,7 @@ int main(void)
 
 	alph = 'a';
 
-	while (alph <= 'z')
+	while (alph <= 'z' && alph != 'q' && alph != 'c')
 	{
 		putchar(alph);
 		alph++;
