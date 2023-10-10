@@ -3,16 +3,17 @@
 /**
  * print_alphabet - Prints the alphabet in lowercase
  */
+
 void print_alphabet(void)
 {
-    char alph;
+	char alph;
+	alph = 'a';
 
-    alph = 'a';
-    while (alph <= 'z')
-    {
-        _putchar(alph);
-        alph++;
-    }
-    _putchar('\n');
+	while (alph <= 'z')
+	{
+		_putchar(alph);
+		alph++;
+	}
+	_putchar('\n');
 }
 
