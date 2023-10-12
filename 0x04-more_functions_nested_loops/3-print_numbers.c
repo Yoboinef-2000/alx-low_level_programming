@@ -14,7 +14,7 @@ void print_numbers(void)
 
 	ghar = '1';
 
-	while (ghar =< '9')
+	while (ghar <= '9')
 	{
 		_putchar(ghar);
 	}
