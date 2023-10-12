@@ -13,10 +13,26 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	if (n / 10 != 0)
+	if (n == 0)
 	{
-		print_number(n / 10);
+		_putchar('0');
 	}
-	_putchar('0' + n % 10);
-}
+	else
+	{
+		int rev = 0;
+		int digit;
 
+		while (n > 0)
+		{
+			digit = n % 10;
+			rev = rev * 10 + digit;
+			n = n / 10;
+		}
+		while (rev > 0)
+		{
+			digit = rev % 10;
+			_putchar('0' + digit);
+			rev = rev / 10;
+		}
+	}
+}
