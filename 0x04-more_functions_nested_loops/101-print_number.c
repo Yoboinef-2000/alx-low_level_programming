@@ -3,6 +3,8 @@
 /**
  * print_number - Prints an integer using _putchar.
  * @n: The integer to print.
+ *
+ * Description: Print dat thang
  */
 void print_number(int n)
 {
