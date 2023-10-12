@@ -13,7 +13,7 @@ void print_most_numbers(void)
 {
 	char ghar;
 
-	ghar = '1';
+	ghar = '0';
 
 	while (ghar <= '9')
 	{
