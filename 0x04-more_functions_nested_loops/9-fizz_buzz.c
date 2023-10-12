@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "main.h"
+#include<stdio.h>
+#include"main.h"
 
 /**
  * fizz_buzz - Prints numbers from 1 to 100, applying Fizz-Buzz rules.
