@@ -2,18 +2,12 @@
 #include"main.h"
 
 /**
- * fizz_buzz - Prints numbers from 1 to 100, applying Fizz-Buzz rules.
  *
- * Description: This function will print numbers from 1 to 100,
- * applying fizz buzz rules which are
- * any multiples of 3 will have "FIZZ" written in their place
- * any multiples of 5 will have "BUZZ" written in their place
- * and lastly, any multiples of 3 and 5 simultaneously will
- * have "FIZZBUZZ" written in their place.
+ * main - check the code
  *
- * Enjoy :)
+ * Return - always 0
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int i;
 
@@ -62,4 +56,5 @@ void fizz_buzz(void)
 		}
 	}
 	_putchar('\n');
+	return (0);
 }
