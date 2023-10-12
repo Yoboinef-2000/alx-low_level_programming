@@ -2,13 +2,14 @@
 #include<stdio.h>
 
 /**
- * print_numbers - Prints numbers from 1 to 9
+ * print_most_numbers - Prints numbers from 1 to 9
+ * with the excepyion of 2 and 4
  *
  * Description: Can't you read? Refer to the
  * first commented out line.
  */
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	char ghar;
 
@@ -16,7 +17,10 @@ void print_numbers(void)
 
 	while (ghar <= '9')
 	{
-		_putchar(ghar);
+		if (ghar != 2 && ghar != 4)
+		{
+			_putchar(ghar);
+		}
 		ghar++;
 	}
 	_putchar('\n');
