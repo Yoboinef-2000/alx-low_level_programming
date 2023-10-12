@@ -17,7 +17,7 @@ void print_most_numbers(void)
 
 	while (ghar <= '9')
 	{
-		if (ghar != 2 && ghar != 4)
+		if (ghar != '2' && ghar != '4')
 		{
 			_putchar(ghar);
 		}
