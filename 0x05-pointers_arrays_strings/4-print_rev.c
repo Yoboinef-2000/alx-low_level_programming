@@ -13,6 +13,7 @@
 void print_rev(char *s)
 {
 	int length, totalcharacters, i;
+	char reversedstring[1024];
 
 	length = 0;
 	totalcharacters = 0;
@@ -21,8 +22,6 @@ void print_rev(char *s)
 	{
 		length++;
 	}
-
-	char reversedstring[1024];
 
 	for (i = length - 1; i >= 0 ; i--)
 	{
