@@ -12,9 +12,10 @@
 
 void print_rev(char *s)
 {
-	int length;
+	int length, totalcharacters, i;
 
 	length = 0;
+	totalcharacters = 0;
 
 	while (s[length] != '\0')
 	{
@@ -22,11 +23,8 @@ void print_rev(char *s)
 	}
 
 	char reversedstring[length + 1];
-	int totalcharacters;
 
-	totalcharacters = 0;
-
-	for (int i = length - 1; i >= 0 ; i--)
+	for (i = length - 1; i >= 0 ; i--)
 	{
 		reversedstring[totalcharacters] = s[i];
 		totalcharacters++;
