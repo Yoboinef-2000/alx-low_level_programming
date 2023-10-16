@@ -12,11 +12,9 @@
 
 void puts_half(char *str)
 {
-	int length, charcounter, i;
-	char secondhalfarr[1024];
+	int length, i;
 
 	length = 0;
-	charcounter = 0;
 
 	while (str[length] != '\0')
 	{
@@ -25,22 +23,16 @@ void puts_half(char *str)
 
 	if (length % 2 == 0)
 	{
-		for (i = length / 2; i < length; i++)
-		{
-			secondhalfarr[charcounter] = str[i];
-			charcounter++;
-		}
+		i = length / 2;
 	}
-
 	else
 	{
-		for (i = (length - 1) / 2; i < length; i++)
-		{
-			secondhalfarr[charcounter] = str[i];
-			charcounter++;
-		}
+		i = (length - 1) / 2;
 	}
-	secondhalfarr[length] = '\0';
-
-	printf("%s\n", secondhalfarr);
+	while (str[i] != '\0')
+	{
+		printf("%c", str[i]);
+		i++;
+	}
+	printf("\n");
 }
