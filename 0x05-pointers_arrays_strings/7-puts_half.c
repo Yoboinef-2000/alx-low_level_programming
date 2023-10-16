@@ -23,10 +23,22 @@ void puts_half(char *str)
 		length++;
 	}
 
-	for (i = length / 2; i < length; i++)
+	if (length % 2 == 0)
 	{
-		secondhalfarr[charcounter] = str[i];
-		charcounter++;
+		for (i = length / 2; i < length; i++)
+		{
+			secondhalfarr[charcounter] = str[i];
+			charcounter++;
+		}
+	}
+
+	else
+	{
+		for (i = (length - 1) / 2; i < length; i++)
+		{
+			secondhalfarr[charcounter] = str[i];
+			charcounter++;
+		}
 	}
 	secondhalfarr[length] = '\0';
 
