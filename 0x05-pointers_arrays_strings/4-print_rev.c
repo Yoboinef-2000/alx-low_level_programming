@@ -22,7 +22,7 @@ void print_rev(char *s)
 		length++;
 	}
 
-	char reversedstring[length + 1];
+	char reversedstring[1024];
 
 	for (i = length - 1; i >= 0 ; i--)
 	{
