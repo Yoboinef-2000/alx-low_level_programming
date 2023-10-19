@@ -19,13 +19,13 @@ char *cap_string(char *s)
 {
 	int cp;
 
-	cp = 27;
+	cp = 1;
 
 	for (int i = 0; s[i] != '\0'; i++)
 	{
 		char c = s[i];
 
-		if (c >= 'a' && c <= 'z' && cp == 27)
+		if (c >= 'a' && c <= 'z' && cp)
 		{
 			s[i] = c + ('A' - 'a');
 			cp = 0;
@@ -36,7 +36,7 @@ char *cap_string(char *s)
 			|| c == '\"' || c == '(' || c == ')' || c == '{' ||
 			c == '}')
 		{
-			cp = 27;
+			cp = 1;
 		}
 
 		else
