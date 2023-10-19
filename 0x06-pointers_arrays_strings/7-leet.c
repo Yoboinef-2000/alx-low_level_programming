@@ -17,39 +17,5 @@
  */
 char *leet(char *s)
 {
-	int i;
-
-	i = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-		char c;
-
-		c = s[i];
-
-		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		{
-			if (c == 'a' || c == 'A')
-			{
-				s[i] = '4';
-			}
-			else if (c == 'e' || c == 'E')
-			{
-				s[i] = '3';
-			}
-			else if (c == 'o' || c == 'O')
-			{
-				s[i] = '0';
-			}
-			else if (c == 't' || c == 'T')
-			{
-				s[i] = '7';
-			}
-			else if (c == 'l' || c == 'L')
-			{
-				s[i] = '1';
-			}
-		}
-	}
-	return (s);
+return (s);
 }

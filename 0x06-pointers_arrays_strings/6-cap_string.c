@@ -18,18 +18,19 @@
 char *cap_string(char *s)
 {
 	int cp;
+	int i;
+	char c;
 
 	cp = 1;
 
-	for (int i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		char c;
 
 		c = s[i];
 
 		if (c >= 'a' && c <= 'z' && cp)
 		{
-			s[i] = c + ('A' - 'a');
+			s[i] = c - ('a' - 'A');
 			cp = 0;
 		}
 
