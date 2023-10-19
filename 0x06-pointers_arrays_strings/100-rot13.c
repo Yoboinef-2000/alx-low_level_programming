@@ -31,7 +31,7 @@ char *rot13(char *s)
 		}
 		else if (c >= 'A' && c <= 'Z')
 		{
-			str[i] = ((c - 'A' + 13) % 26) + 'A';
+			s[i] = ((c - 'A' + 13) % 26) + 'A';
 		}
 	}
 	return (s);
