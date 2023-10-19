@@ -20,16 +20,18 @@ char *rot13(char *s)
 {
 	int i;
 	char c;
-	char rot;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		c = s[i];
 
-		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		if ((c >= 'a' && c <= 'z'))
 		{
-			rot = (c >= 'a' && c <= 'z') ? 'a' : 'A';
-			s[i] = (c - rot + 13) % 26 + rot;
+			s[i] = ((c - 'a' + 13) % 26) + 'a';
+		}
+		else if (c >= 'A' && c <= 'Z')
+		{
+			str[i] = ((c - 'A' + 13) % 26) + 'A';
 		}
 	}
 	return (s);
