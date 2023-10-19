@@ -23,7 +23,9 @@ char *cap_string(char *s)
 
 	for (int i = 0; s[i] != '\0'; i++)
 	{
-		char c = s[i];
+		char c;
+
+		c = s[i];
 
 		if (c >= 'a' && c <= 'z' && cp)
 		{
