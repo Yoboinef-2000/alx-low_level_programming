@@ -1,13 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - MAIN
- *
- * Description: Wasgoinon
- *
- * Return: Washannein
- */
-
 int main(void)
 {
 	int n;
