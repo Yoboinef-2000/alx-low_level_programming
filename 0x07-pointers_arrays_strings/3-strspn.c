@@ -10,7 +10,7 @@
  *
  * Description: This function returns the number of bytes in the initial
  * segment of "s" which consist only of bytes from "accept"
- * 
+ *
  * Return: This functions returns an int value of how many bytes
  * in "acceot" match the bytes in "s"
  */
