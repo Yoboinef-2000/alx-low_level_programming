@@ -16,7 +16,6 @@
  * character c in the string s,
  * or NULL if the character is not found
  */
-
 char *_strchr(char *s, char c)
 {
 	int i;
@@ -28,6 +27,7 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		}
 	}
-	return (NULL);
-}
 
+	return (NULL);
+
+}
