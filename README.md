@@ -1,1 +1,1 @@
-This directory contains more C exercises. It will mostly be about functions and nested loops
+Here are some low level programming exercises offered by ALX
