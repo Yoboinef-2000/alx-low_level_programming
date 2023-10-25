@@ -14,7 +14,7 @@
 
 int is_prime_number(int n)
 {
-	int i, temp;
+	int temp;
 
 	temp = n;
 
