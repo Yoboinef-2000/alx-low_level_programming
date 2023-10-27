@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	for (count = 1; count < argc; count++)
 	{
 		i = 0;
-		while(argv[count][i])
+		while (argv[count][i])
 		{
 			if (!isdigit(argv[count][i]))
 			{
