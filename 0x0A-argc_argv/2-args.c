@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
 	counter = 0;
 
-	while (counter <= argc)
+	while (counter < argc)
 	{
 		printf("%s\n", argv[counter]);
 		counter++;
