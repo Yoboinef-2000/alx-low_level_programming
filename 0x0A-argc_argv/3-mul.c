@@ -30,4 +30,5 @@ int main(int argc, char *argv[])
 	secondargument = atoi(argv[2]);
 	product = firstargument * secondargument;
 	printf("%d\n", product);
+	return (0);
 }
