@@ -14,6 +14,7 @@
  * Return: 0
  */
 
+#pragma GCC diagnostic ignored "-Wunused-parameter"
 int main(int argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
