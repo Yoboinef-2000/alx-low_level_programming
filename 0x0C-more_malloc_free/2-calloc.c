@@ -19,7 +19,6 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
 	void *allctdmem;
 
 	if (nmemb == 0 || size == 0)
