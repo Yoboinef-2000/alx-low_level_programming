@@ -2,7 +2,18 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int isPositiveInteger(char *str)
+/**
+ * isPositiveInteger - this function checks whether the char
+ * "str" is an integer or not
+ * @str: the char to be checked
+ *
+ * Description: refer to the first commented out line
+ *
+ * Return: returns 1 if "str" is is a digit, or returns
+ * 0 otherwise
+ */
+
+int isInteger(char *str)
 {
 	int i;
 
@@ -16,10 +27,34 @@ int isPositiveInteger(char *str)
 	return (1);
 }
 
+/**
+ * multiply - this function multiplies two numbers and returns
+ * their product
+ * @num1: the first number to be multiplied
+ * @num2: the second number to be multiplied
+ *
+ * Description: refer to the first commented out line
+ *
+ * Return: returns their product
+ */
+
 int multiply(int num1, int num2)
 {
 	return (num1 * num2);
 }
+
+/**
+ * main - MAIN
+ * @argc: This stands for argument counter and it is basically is
+ * the number of arguments passed to the argument line
+ * @argv: This stands for argument vector and it is a pointer to an
+ * array that holds the values that were passed to the argument line
+ *
+ * Description - MAIN FUNCTION
+ *
+ * Return: Product of the multiplication of two numbers passed through
+ * the argument line
+ */
 
 int main(int argc, char *argv[])
 {
@@ -29,8 +64,8 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
-	
-	if (!isPositiveInteger(argv[1]) || !isPositiveInteger(argv[2]))
+
+	if (!isInteger(argv[1]) || !isInteger(argv[2]))
 	{
 		printf("Error\n");
 		return (98);
@@ -38,11 +73,15 @@ int main(int argc, char *argv[])
 	
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[2]);
-	
+
+	if (num1 < 0 || num2 < 0)
+	{
+		printf("Error\n");
+                return (98);
+	}
+
 	product = multiply(num1, num2);
-	
 	printf("%d\n", product);
-	
 	return (0);
 }
 
