@@ -37,15 +37,9 @@ void print_string(va_list args)
 	char *str;
 
 	str = va_arg(args, char *);
-	if (str == NULL)
-	{
-		printf("(nil)");
-	}
-	else
-	{
-		printf("%s", str);
-	}
+	printf("%s", (str != NULL) ? str : "(nil)");
 }
+
 
 void print_all(const char * const format, ...)
 {
