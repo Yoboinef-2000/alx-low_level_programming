@@ -1,68 +1,83 @@
-#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
+#include "variadic_functions.h"
 
-/**
- * print_all - this is a function that prints anything
- * @format: this is the type of data type that is
- * going to be printed
- * "c": char
- * "i": integer
- * "f": float
- * "s": char * (if the string is NULL, print (nil) instead)
- *
- * Description: refer to the first commented out line
- */
+typedef struct
+{
+	char format;
+	void (*print_function)(va_list args);
+} FormatSpecifier;
+
+void print_char(va_list args)
+{
+	char c;
+
+	c = va_arg(args, int);
+	printf("%c", c);
+}
+
+void print_int(va_list args)
+{
+	int num;
+
+	num = va_arg(args, int);
+	printf("%d", num);
+}
+
+void print_float(va_list args)
+{
+	double f; 
+
+	f = va_arg(args, double);
+	printf("%f", f);
+}
+
+void print_string(va_list args)
+{
+	char *str;
+
+	str = va_arg(args, char *);
+	if (str == NULL)
+	{
+		printf("(nil)");
+	}
+	else
+	{
+		printf("%s", str);
+	}
+}
 
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	int isfirst;
-	int num;
-	int i;
-	char c;
-	char *str;
-	double f;
-
+	int i, j;
+	int is_first; 
+	
+	FormatSpecifier formats[] = {
+                {'c', print_char},
+                {'i', print_int},
+                {'f', print_float},
+                {'s', print_string},
+                {0, NULL}
+        };
+	is_first = 1;
 	i = 0;
-	isfirst = 1;
+
 	va_start(args, format);
+
 	while (format[i] != '\0')
 	{
-		if ((format[i] == 'c') || (format[i] == 'i')
-				|| (format[i] == 'f') || (format[i] == 's'))
+		for (j = 0; formats[j].format != 0; j++)
 		{
-			if (!isfirst)
+			if (format[i] == formats[j].format)
 			{
-				printf(", ");
-			}
-			isfirst = 0;
-			if (format[i] == 'c')
-			{
-				c = va_arg(args, int);
-				printf("%c", c);
-			}
-			if (format[i] == 'i')
-			{
-				num = va_arg(args, int);
-				printf("%d", num);
-			}
-			if (format[i] == 'f')
-			{
-				f = va_arg(args, double);
-				printf("%f", f);
-			}
-			if (format[i] == 's')
-			{
-				str = va_arg(args, char *);
-				if (str == NULL)
+				if (!is_first)
 				{
-					printf("(nil)");
+					printf(", ");
 				}
-				else
-				{
-					printf("%s", str);
-				}
+				is_first = 0;
+				formats[j].print_function(args);
+				break;
 			}
 		}
 		i++;
