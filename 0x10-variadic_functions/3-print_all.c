@@ -67,7 +67,8 @@ void print_all(const char * const format, ...)
 
 	while (format[i] != '\0')
 	{
-		for (j = 0; formats[j].format != 0; j++)
+		j = 0;
+		while (formats[j].format != 0)
 		{
 			if (format[i] == formats[j].format)
 			{
@@ -79,6 +80,7 @@ void print_all(const char * const format, ...)
 				formats[j].print_function(args);
 				break;
 			}
+			j++;
 		}
 		i++;
 	}
