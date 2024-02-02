@@ -22,19 +22,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	newElement = malloc(sizeof(hash_node_t));
 	if (newElement == NULL)
-	{
 		return (0);
-	}
 	newElement->key = strdup(key);
 	if (newElement->key == NULL)
-	{
 		return (0);
-	}
 	newElement->value = strdup(value);
 	if (newElement->value == NULL)
-	{
-		return (0);
-	}
+		return (0); /* My bad for the congestion - Betty a bit** */
 	pos = key_index((const unsigned char *)key, ht->size);
 	head = ht->array[pos];
 	currentElement = ht->array[pos];
