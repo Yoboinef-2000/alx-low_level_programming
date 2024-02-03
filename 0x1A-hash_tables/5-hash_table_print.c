@@ -13,7 +13,9 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *currentnode;
+	int nightmare;
 
+	nightmare = 1;
 	if (ht != NULL)
 	{
 		printf("{");
@@ -22,7 +24,12 @@ void hash_table_print(const hash_table_t *ht)
 			currentnode = ht->array[i];
 			while (currentnode != NULL)
 			{
-				printf("'%s': '%s',", currentnode->key, currentnode->value);
+				if (!nightmare)
+				{
+					printf(", ");
+				}
+				printf("'%s': '%s'", currentnode->key, currentnode->value);
+				nightmare = 0;
 				currentnode = currentnode->next;
 			}
 		}
