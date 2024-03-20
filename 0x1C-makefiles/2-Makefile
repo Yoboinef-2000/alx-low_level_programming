@@ -6,10 +6,10 @@ NAME = school
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 main.o: main.c
-	gcc -c -o main.o main.c 
+	$(CC) -c -o main.o main.c 
 
 school.o: school.c
-	gcc -c -o school.o school.c
+	$(CC) -c -o school.o school.c
